@@ -263,7 +263,7 @@ def index():
     # og:image / og:url 需要是完整網址，依目前請求的網域動態組成，
     # 這樣本機（127.0.0.1）與部署後的正式網域都能正確顯示分享預覽。
     og_url = request.host_url.rstrip("/") + "/"
-    og_image = request.host_url.rstrip("/") + "/static/preview.png"
+    og_image = "https://images.unsplash.com/photo-1596526139081-b09b5b6f722e?w=600&auto=format&fit=crop&q=60"
     return render_template_string(PAGE, og_url=og_url, og_image=og_image)
 
 
